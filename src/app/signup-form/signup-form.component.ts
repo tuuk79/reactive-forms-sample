@@ -4,7 +4,7 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-	selector: 'signup-form',
+	selector: 'app-signup-form',
 	templateUrl: 'signup-form.component.html'
 })
 export class SignupFormComponent {

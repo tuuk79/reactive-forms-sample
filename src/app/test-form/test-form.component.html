@@ -1,0 +1,6 @@
+<form action="" novalidate [formGroup]="myTestForm">
+	<label for="">Info:</label>
+	<input type="text" formControlName="info">
+</form>
+
+<p>{{ myTestForm.value | json }}</p>

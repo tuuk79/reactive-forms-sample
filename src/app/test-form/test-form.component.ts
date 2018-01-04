@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Address } from '../models/address';
 
 @Component({
 	selector: 'app-test-form',
@@ -9,9 +11,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class TestFormComponent implements OnInit {
 	myTestForm: FormGroup;
 
-	constructor() {
-		this.myTestForm = new FormGroup({
-			info: new FormControl()
+	constructor(private fb: FormBuilder) {
+		this.myTestForm = this.fb.group({
+			info: this.fb.control('', Validators.required),
+			address: this.fb.group(new Address())
 		});
 	}
 

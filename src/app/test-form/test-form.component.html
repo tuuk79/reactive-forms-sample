@@ -1,6 +1,11 @@
 <form action="" novalidate [formGroup]="myTestForm">
 	<label for="">Info:</label>
 	<input type="text" formControlName="info">
+	<div formGroupName="address">
+		<label for="">Street Address:</label>
+		<input type="text" formControlName="street">
+	</div>
 </form>
 
 <p>{{ myTestForm.value | json }}</p>
+<p>{{ myTestForm.status | json }}</p>
